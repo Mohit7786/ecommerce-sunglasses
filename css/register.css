@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    --main-color: orange;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    padding: 13px 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .logo span {
+    color: var(--main-color);
+}
+
+.navbar .logo h1 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.navbar .center a {
+    margin: 0 20px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.navbar .center a:hover {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.auth span {
+    margin: 0 8px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth .wishlist {
+    color: red;
+}
+
+.auth .cart,
+.user {
+    color: white;
+}
+
+.user:hover {
+    color: orange;
+    transition: all .3s;
+}
+
+.cart:hover {
+    color: orange;
+    transition: all .3s;
+}
+
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.86),
+            rgba(0, 0, 0, 0.86)), url(/images/h.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+
+}
+
+.container {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.container h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+
+.container form {
+    margin-top: 30px;
+}
+
+.container form .input-box {
+    height: 52px;
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: rgba(255, 106, 0, 0.521);
+}
+
+form .terms {
+    display: flex;
+    align-items: center;
+}
+
+form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: rgba(255, 106, 0, 0.672);
+}
+
+.input-box.button input:hover {
+    background: rgba(255, 106, 0, 0.858);
+}
+
+form .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+form .text h3 a {
+    color: rgba(255, 106, 0);
+    text-decoration: none;
+}
+
+form .text h3 a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    padding: 3rem 9%;
+    background-color: #1b1b1b;
+}
+
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.footerContainer .row {
+    padding: 1rem 0;
+    display: flex;
+    gap: .8rem;
+    flex-flow: column;
+
+}
+
+.row h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.row p {
+    color: white;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.row a {
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.row a:hover {
+    color: var(--main-color);
+    transition: all .2s;
+}

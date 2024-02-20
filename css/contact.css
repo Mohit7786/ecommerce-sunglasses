@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
+:root {
+    --main-color: orange;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    padding: 13px 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .logo span {
+    color: var(--main-color);
+}
+
+.navbar .logo h1 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.navbar .center a {
+    margin: 0 20px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.navbar .center a:hover {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.auth span {
+    margin: 0 8px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth .wishlist {
+    color: red;
+}
+
+.auth .cart,
+.user {
+    color: white;
+}
+
+.user:hover {
+    color: orange;
+    transition: all .3s;
+}
+
+.cart:hover {
+    color: orange;
+    transition: all .3s;
+}
+
+.search:hover {
+    color: orange;
+    transition: all .3s;
+}
+
+header .search-bar-container {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    padding: 8px 20px;
+    background: #333;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+header .search-bar-container.active {
+    top: 100%;
+}
+
+header .search-bar-container #search-bar {
+    width: 92%;
+    padding: 8px 20px;
+    text-transform: none;
+    color: #333;
+    font-size: 1rem;
+    border-radius: .5rem;
+    outline: none;
+}
+
+header .search-bar-container label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+header .search-bar-container label:hover {
+    color: var(--main-color);
+}
+
+section {
+    padding: 3rem 7%;
+}
+
+.head {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+    padding: 20px 0;
+    height: 180px;
+    width: 100%;
+    color: orange;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.7)), url(/images/h.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.head p {
+    color: white;
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+
+.contact {
+    padding: 0;
+    margin: 10px 0;
+    position: relative;
+}
+
+.contact img {
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    mix-blend-mode: darken;
+}
+
+.contactContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.contactContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+}
+
+.contactContent .box {
+    flex: 1 1 25rem;
+    width: 800px;
+    padding: 20px 30px;
+    border: 2px solid white;
+}
+
+.contactContent .box:nth-child(1) {
+    background-color: rgb(20, 20, 27);
+    border-radius: 4px;
+    border-right: none;
+    height: 100%;
+}
+
+.contactContent .box:nth-child(2) {
+    background-color: black;
+    height: 100%;
+    border-radius: 4px;
+    border-left: none;
+}
+
+.box h3 {
+    color: orange;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.box .input-box {
+    margin: 15px 0;
+    padding: 7px 8px;
+}
+
+.input-box input {
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid white;
+    padding: 7px 0;
+}
+
+.input-box textarea {
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid white;
+    padding: 7px 4px;
+    border-radius: 3px;
+    width: 100%;
+    resize: none;
+}
+
+.input-box button {
+    font-size: 1.1rem;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid white;
+    padding: 7px 4px;
+    border-radius: 3px;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    cursor: pointer;
+}
+
+.input-box button:hover {
+    background-color: orange;
+    color: whi;
+    transition: all .3s ease;
+    border: 2px solid orange;
+}
+
+.box .col {
+    color: white;
+    margin: 15px 0;
+}
+
+.col p:nth-child(1) {
+    font-size: 1.7rem;
+    margin: 2px 0;
+    color: orange;
+}
+
+.col p:nth-child(2) {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.col p:nth-child(3) {
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.social {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social a {
+    text-align: center;
+    margin-right: 10px;
+    font-size: 2rem;
+    padding: 0 9px;
+    border-radius: 8px;
+    color: orange;
+    font-weight: 700;
+}
+
+.social a:hover {
+    background-color: orange;
+    color: black;
+    transition: all .2s ease;
+}
+
+.footer {
+    padding: 3rem 7%;
+    background-color: #1b1b1b;
+}
+
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.footerContainer .row {
+    padding: 1rem 0;
+    display: flex;
+    gap: .8rem;
+    flex-flow: column;
+}
+
+.row h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.row p {
+    color: white;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.row a {
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.row a:hover {
+    color: var(--main-color);
+    transition: all .2s;
+}
